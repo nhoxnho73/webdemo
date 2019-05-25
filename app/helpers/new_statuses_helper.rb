@@ -1,0 +1,2 @@
+module NewStatusesHelper
+end

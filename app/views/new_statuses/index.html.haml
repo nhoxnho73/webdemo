@@ -1,0 +1,10 @@
+%h1 NewStatuses#index
+%table
+  %thead
+    %tr
+      %th Name
+  %tbody
+    - @status.each do |status|
+      %tr
+        %td= status.name
+        

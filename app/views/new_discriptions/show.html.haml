@@ -1,0 +1,11 @@
+%h1 Discription
+%table
+  %thead
+    %tr
+      %th code
+      %th discription
+  %tbody
+    - @discription.each do |discription|
+      %tr
+        %td= discription.code
+        %td= discription.discription

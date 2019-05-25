@@ -1,0 +1,2 @@
+class NewDiscription < ApplicationRecord
+end
