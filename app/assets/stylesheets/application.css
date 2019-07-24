@@ -12,4 +12,84 @@
  *
  *= require_tree .
  *= require_self
+ *= require plugins/bootstrap/css/bootstrap.min
+ *= require plugins/bootstrap-daterangepicker/daterangepicker-bs3
+ *= require plugins/bootstrap-datepicker/css/datepicker3
+ *= require plugins/font-awesome/css/font-awesome.min
+ *= require plugins/jquery-scrollbar/jquery.scrollbar
+ *= require plugins/select2/css/select2.min
+ *= require plugins/switchery/css/switchery.min
+ *= require plugins/animate.min
+ *= require pages/css/pages-icons
+ *= require pages/css/pages
  */
+
+ .card-footer.user-card {
+    background-color: #e4e4e2;
+}
+
+.breadcrumb-item.active a {
+    color: #0090d9;
+}
+
+.nav-header-logo {
+    font-size: 30px;
+    font-weight: bolder;
+    padding-top: 5px;
+    color: black;
+}
+
+/* card */
+.card-header {
+    padding-top: 15px !important
+}
+.img-thumbnail-avatar {
+    width: 69px !important;
+    height: 69px !important;
+    border-radius: 50%;
+}
+
+.widget-content {
+    padding: 15px;
+}
+
+.img-thumbnail {
+    border-radius: 50%!important;
+    margin-right: 40px;
+  }
+.table td, .table th {
+    vertical-align: middle!important;
+  }
+form .row [class*='col-md-12']:not(:first-child){
+        padding-left: 0px!important;
+    }
+.custom-select{
+    border: 1px solid rgba(0, 0, 0, 0.07)!important;
+}
+
+/* Notification */
+.pgn-wrapper { z-index: 99999 !important; }
+
+.page-item.active a {
+    background-color: #6d5cae !important;
+    border-color: #6d5cae !important;
+}
+
+.page-item a {
+    color: #626262;
+}
+
+.page-item a:hover {
+    color: #6d5cae;
+}
+
+.border-table th{
+    color: black !important;
+}
+
+.border-table th,
+.border-table td{
+    border: 1px solid grey !important;
+    padding-left: 5px;
+    padding-right: 5px;
+}

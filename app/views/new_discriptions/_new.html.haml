@@ -1,0 +1,11 @@
+#new_discription.modal.fade.stick-up{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header.clearfix.text-left
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"}
+          %i.pg-close.fs-14
+        %h5
+          %strong
+            Tạo nội dung mới
+      .modal-body
+        = render "form", method: :post

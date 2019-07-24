@@ -1,0 +1,87 @@
+.overlay.hide{"data-pages" => "search"}
+  .overlay-content.has-results.m-t-20
+    .container-fluid
+      %div
+        %p.nav-header-logo{style: 'color: #727575;'} Books Management System
+      -#%img.overlay-brand{:alt => "logo", "data-src" => "/assets/img/logo.png", "data-src-retina" => "/assets/img/logo_2x.png", :height => "22", :src => "/assets/img/logo.png", :width => "78"}/
+      -#%a.close-icon-light.overlay-close.text-black.fs-16{:href => "#"}
+        %i.pg-close
+      %a.close-icon-light.overlay-close.text-black.fs-16#search-panel-close{:href => "javascript:void(0)"}
+        %i.pg-close
+    .container-fluid
+      %input#overlay-search.no-border.overlay-search.bg-transparent{:autocomplete => "off", :placeholder => "Search...", :spellcheck => "false"}/
+      %br/
+      -#.inline-block
+      -#  .checkbox.right
+      -#    %input#checkboxn{:checked => "checked", :type => "checkbox", :value => "1"}/
+      -#    %label{:for => "checkboxn"}
+      -#      %i.fa.fa-search
+      -#      Search within page
+      .inline-block.m-l-10
+        %p.fs-13 Press enter to search projects or employees
+    .container-fluid
+      %span
+        %strong Suggestions :
+      %span#overlay-suggestions
+      %br/
+      .search-loading{style: 'display: none;'}
+        .row
+          .progress-circle-indeterminate
+      .search-results.m-t-40
+        %p.bold Pages Search Results
+        .row
+          .col-md-6
+            %div
+              .thumbnail-wrapper.d48.circular.bg-success.text-white.inline.m-t-10
+                %div
+                  %img{:alt => "", "data-src" => "/assets/img/profiles/avatar.jpg", "data-src-retina" => "/assets/img/profiles/avatar2x.jpg", :height => "50", :src => "/assets/img/profiles/avatar.jpg", :width => "50"}/
+              .p-l-10.inline.p-t-5
+                %h5.m-b-5
+                  %span.semi-bold.result-name ice cream
+                  on pages
+                %p.hint-text via john smith
+            %div
+              .thumbnail-wrapper.d48.circular.bg-success.text-white.inline.m-t-10
+                %div T
+              .p-l-10.inline.p-t-5
+                %h5.m-b-5
+                  %span.semi-bold.result-name ice cream
+                  related topics
+                %p.hint-text via pages
+            %div
+              .thumbnail-wrapper.d48.circular.bg-success.text-white.inline.m-t-10
+                %div
+                  %i.fa.fa-headphones.large-text
+              .p-l-10.inline.p-t-5
+                %h5.m-b-5
+                  %span.semi-bold.result-name ice cream
+                  music
+                %p.hint-text via pagesmix
+          .col-md-6
+            %div
+              .thumbnail-wrapper.d48.circular.bg-info.text-white.inline.m-t-10
+                %div
+                  %i.fa.fa-facebook.large-text
+              .p-l-10.inline.p-t-5
+                %h5.m-b-5
+                  %span.semi-bold.result-name ice cream
+                  on facebook
+                %p.hint-text via facebook
+            %div
+              .thumbnail-wrapper.d48.circular.bg-complete.text-white.inline.m-t-10
+                %div
+                  %i.fa.fa-twitter.large-text
+              .p-l-10.inline.p-t-5
+                %h5.m-b-5
+                  Tweats on
+                  %span.semi-bold.result-name ice cream
+                %p.hint-text via twitter
+            %div
+              .thumbnail-wrapper.d48.circular.text-white.bg-danger.inline.m-t-10
+                %div
+                  %i.fa.fa-google-plus.large-text
+              .p-l-10.inline.p-t-5
+                %h5.m-b-5
+                  Circles on
+                  %span.semi-bold.result-name ice cream
+                %p.hint-text via google plus

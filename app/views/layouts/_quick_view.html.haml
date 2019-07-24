@@ -1,0 +1,557 @@
+#quickview.quickview-wrapper{"data-pages" => "quickview"}
+  %ul.nav.nav-tabs{:role => "tablist"}
+    %li
+      %a{"data-target" => "#quickview-notes", "data-toggle" => "tab", :href => "#quickview-notes", :role => "tab"} Notes
+    %li
+      %a{"data-target" => "#quickview-alerts", "data-toggle" => "tab", :href => "#quickview-alerts", :role => "tab"} Alerts
+    %li
+      %a.active{"data-toggle" => "tab", :href => "#quickview-chat", :role => "tab"} Chat
+  %a.btn-link.quickview-toggle{"data-toggle" => "quickview", "data-toggle-element" => "#quickview"}
+    %i.pg-close
+  .tab-content
+    #quickview-notes.tab-pane.no-padding
+      #note-views.view-port.clearfix.quickview-notes
+        #quick-note-list.view.list
+          .toolbar.clearfix
+            %ul.pull-right
+              %li
+                %a.delete-note-link{:href => "#"}
+                  %i.fa.fa-trash-o
+              %li
+                %a.new-note-link{"data-navigate" => "view", "data-view-animation" => "push", "data-view-port" => "#note-views", :href => "#"}
+                  %i.fa.fa-plus
+            %button.btn-remove-notes.btn.btn-xs.btn-block.hide
+              %i.fa.fa-times
+              Delete
+          %ul
+            %li{"data-noteid" => "1"}
+              .left
+                .checkbox.check-warning.no-margin
+                  %input#qncheckbox1{:type => "checkbox", :value => "1"}/
+                  %label{:for => "qncheckbox1"}
+                %p.note-preview Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+              .right.pull-right
+                %span.date 12/12/14
+                %a{"data-navigate" => "view", "data-view-animation" => "push", "data-view-port" => "#note-views", :href => "#"}
+                  %i.fa.fa-chevron-right
+            %li{"data-noteid" => "2"}
+              .left
+                .checkbox.check-warning.no-margin
+                  %input#qncheckbox2{:type => "checkbox", :value => "1"}/
+                  %label{:for => "qncheckbox2"}
+                %p.note-preview Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+              .right.pull-right
+                %span.date 12/12/14
+                %a{:href => "#"}
+                  %i.fa.fa-chevron-right
+            %li{"data-noteid" => "2"}
+              .left
+                .checkbox.check-warning.no-margin
+                  %input#qncheckbox3{:type => "checkbox", :value => "1"}/
+                  %label{:for => "qncheckbox3"}
+                %p.note-preview Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+              .right.pull-right
+                %span.date 12/12/14
+                %a{:href => "#"}
+                  %i.fa.fa-chevron-right
+            %li{"data-noteid" => "3"}
+              .left
+                .checkbox.check-warning.no-margin
+                  %input#qncheckbox4{:type => "checkbox", :value => "1"}/
+                  %label{:for => "qncheckbox4"}
+                %p.note-preview Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+              .right.pull-right
+                %span.date 12/12/14
+                %a{:href => "#"}
+                  %i.fa.fa-chevron-right
+            %li{"data-noteid" => "4"}
+              .left
+                .checkbox.check-warning.no-margin
+                  %input#qncheckbox5{:type => "checkbox", :value => "1"}/
+                  %label{:for => "qncheckbox5"}
+                %p.note-preview Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+              .right.pull-right
+                %span.date 12/12/14
+                %a{:href => "#"}
+                  %i.fa.fa-chevron-right
+        #quick-note.view.note
+          %div
+            %ul.toolbar
+              %li
+                %a.close-note-link{:href => "#"}
+                  %i.pg-arrow_left
+              %li
+                %a.fs-12{"data-action" => "Bold", :href => "#"}
+                  %i.fa.fa-bold
+              %li
+                %a.fs-12{"data-action" => "Italic", :href => "#"}
+                  %i.fa.fa-italic
+              %li
+                %a.fs-12{:href => "#"}
+                  %i.fa.fa-link
+            .body
+              %div
+                .top
+                  %span 21st april 2014 2:13am
+                .content
+                  .quick-note-editor.full-width.full-height.js-input{:contenteditable => "true"}
+    #quickview-alerts.tab-pane.no-padding
+      #alerts.view-port.clearfix
+        .view.bg-white
+          .navbar.navbar-default.navbar-sm
+            .navbar-inner
+              %a.inline.action.p-l-10.link.text-master{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "javascript:;"}
+                %i.pg-more
+              .view-heading
+                Notications
+              %a.inline.action.p-r-10.pull-right.link.text-master{:href => "#"}
+                %i.pg-search
+          .list-view.boreded.no-top-border{"data-init-list-view" => "ioslist"}
+            .list-view-group-container
+              .list-view-group-header.text-uppercase
+                Calendar
+              %ul
+                %li.alert-list
+                  %a.align-items-center{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "javascript:;"}
+                    %p
+                      %span.text-warning.fs-10
+                        %i.fa.fa-circle
+                    %p.p-l-10.overflow-ellipsis.fs-12
+                      %span.text-master David Nester Birthday
+                    %p.p-r-10.ml-auto.fs-12.text-right
+                      %span.text-warning
+                        Today
+                        %br/
+                      %span.text-master All Day
+                %li.alert-list
+                  %a.align-items-center{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %p
+                      %span.text-warning.fs-10
+                        %i.fa.fa-circle
+                    %p.p-l-10.overflow-ellipsis.fs-12
+                      %span.text-master Meeting at 2:30
+                    %p.p-r-10.ml-auto.fs-12.text-right
+                      %span.text-warning Today
+            .list-view-group-container
+              .list-view-group-header.text-uppercase
+                Social
+              %ul
+                %li.alert-list
+                  %a.p-t-10.p-b-10.align-items-center{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "javascript:;"}
+                    %p
+                      %span.text-complete.fs-10
+                        %i.fa.fa-circle
+                    %p.col.overflow-ellipsis.fs-12.p-l-10
+                      %span.text-master.link
+                        Jame Smith commented on your status
+                        %br/
+                      %span.text-master “Perfection Simplified - Company Revox"
+                %li.alert-list
+                  %a.p-t-10.p-b-10.align-items-center{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "javascript:;"}
+                    %p
+                      %span.text-complete.fs-10
+                        %i.fa.fa-circle
+                    %p.col.overflow-ellipsis.fs-12.p-l-10
+                      %span.text-master.link
+                        Jame Smith commented on your status
+                        %br/
+                      %span.text-master “Perfection Simplified - Company Revox"
+            .list-view-group-container
+              .list-view-group-header.text-uppercase
+                Sever Status
+              %ul
+                %li.alert-list
+                  %a.p-t-10.p-b-10.align-items-center{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %p
+                      %span.text-danger.fs-10
+                        %i.fa.fa-circle
+                    %p.col.overflow-ellipsis.fs-12.p-l-10
+                      %span.text-master.link
+                        12:13AM GTM, 10230, ID:WR174s
+                        %br/
+                      %span.text-master Server Load Exceeted. Take action
+    #quickview-chat.tab-pane.active.no-padding
+      #chat.view-port.clearfix
+        .view.bg-white
+          .navbar.navbar-default
+            .navbar-inner
+              %a.inline.action.p-l-10.link.text-master{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "javascript:;"}
+                %i.pg-plus
+              .view-heading
+                Chat List
+                .fs-11 Show All
+              %a.inline.action.p-r-10.pull-right.link.text-master{:href => "#"}
+                %i.pg-more
+          .list-view.boreded.no-top-border{"data-init-list-view" => "ioslist"}
+            .list-view-group-container
+              .list-view-group-header.text-uppercase
+                a
+              %ul
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/1.jpg", "data-src-retina" => "/assets/img/profiles/1x.jpg", :height => "34", :src => "/assets/img/profiles/1x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master ava flores
+                      %span.block.text-master.hint-text.fs-12 Hello there
+            .list-view-group-container
+              .list-view-group-header.text-uppercase b
+              %ul
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/2.jpg", "data-src-retina" => "/assets/img/profiles/2x.jpg", :height => "34", :src => "/assets/img/profiles/2x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master bella mccoy
+                      %span.block.text-master.hint-text.fs-12 Hello there
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/3.jpg", "data-src-retina" => "/assets/img/profiles/3x.jpg", :height => "34", :src => "/assets/img/profiles/3x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master bob stephens
+                      %span.block.text-master.hint-text.fs-12 Hello there
+            .list-view-group-container
+              .list-view-group-header.text-uppercase c
+              %ul
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/4.jpg", "data-src-retina" => "/assets/img/profiles/4x.jpg", :height => "34", :src => "/assets/img/profiles/4x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master carole roberts
+                      %span.block.text-master.hint-text.fs-12 Hello there
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/5.jpg", "data-src-retina" => "/assets/img/profiles/5x.jpg", :height => "34", :src => "/assets/img/profiles/5x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master christopher perez
+                      %span.block.text-master.hint-text.fs-12 Hello there
+            .list-view-group-container
+              .list-view-group-header.text-uppercase d
+              %ul
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/6.jpg", "data-src-retina" => "/assets/img/profiles/6x.jpg", :height => "34", :src => "/assets/img/profiles/6x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master danielle fletcher
+                      %span.block.text-master.hint-text.fs-12 Hello there
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/7.jpg", "data-src-retina" => "/assets/img/profiles/7x.jpg", :height => "34", :src => "/assets/img/profiles/7x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master david sutton
+                      %span.block.text-master.hint-text.fs-12 Hello there
+            .list-view-group-container
+              .list-view-group-header.text-uppercase e
+              %ul
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/8.jpg", "data-src-retina" => "/assets/img/profiles/8x.jpg", :height => "34", :src => "/assets/img/profiles/8x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master earl hamilton
+                      %span.block.text-master.hint-text.fs-12 Hello there
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/9.jpg", "data-src-retina" => "/assets/img/profiles/9x.jpg", :height => "34", :src => "/assets/img/profiles/9x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master elaine lawrence
+                      %span.block.text-master.hint-text.fs-12 Hello there
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/1.jpg", "data-src-retina" => "/assets/img/profiles/1x.jpg", :height => "34", :src => "/assets/img/profiles/1x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master ellen grant
+                      %span.block.text-master.hint-text.fs-12 Hello there
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/2.jpg", "data-src-retina" => "/assets/img/profiles/2x.jpg", :height => "34", :src => "/assets/img/profiles/2x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master erik taylor
+                      %span.block.text-master.hint-text.fs-12 Hello there
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/3.jpg", "data-src-retina" => "/assets/img/profiles/3x.jpg", :height => "34", :src => "/assets/img/profiles/3x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master everett wagner
+                      %span.block.text-master.hint-text.fs-12 Hello there
+            .list-view-group-container
+              .list-view-group-header.text-uppercase f
+              %ul
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/4.jpg", "data-src-retina" => "/assets/img/profiles/4x.jpg", :height => "34", :src => "/assets/img/profiles/4x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master freddie gomez
+                      %span.block.text-master.hint-text.fs-12 Hello there
+            .list-view-group-container
+              .list-view-group-header.text-uppercase g
+              %ul
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/5.jpg", "data-src-retina" => "/assets/img/profiles/5x.jpg", :height => "34", :src => "/assets/img/profiles/5x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master glen jensen
+                      %span.block.text-master.hint-text.fs-12 Hello there
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/6.jpg", "data-src-retina" => "/assets/img/profiles/6x.jpg", :height => "34", :src => "/assets/img/profiles/6x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master gwendolyn walker
+                      %span.block.text-master.hint-text.fs-12 Hello there
+            .list-view-group-container
+              .list-view-group-header.text-uppercase j
+              %ul
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/7.jpg", "data-src-retina" => "/assets/img/profiles/7x.jpg", :height => "34", :src => "/assets/img/profiles/7x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master janet romero
+                      %span.block.text-master.hint-text.fs-12 Hello there
+            .list-view-group-container
+              .list-view-group-header.text-uppercase k
+              %ul
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/8.jpg", "data-src-retina" => "/assets/img/profiles/8x.jpg", :height => "34", :src => "/assets/img/profiles/8x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master kim martinez
+                      %span.block.text-master.hint-text.fs-12 Hello there
+            .list-view-group-container
+              .list-view-group-header.text-uppercase l
+              %ul
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/9.jpg", "data-src-retina" => "/assets/img/profiles/9x.jpg", :height => "34", :src => "/assets/img/profiles/9x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master lawrence white
+                      %span.block.text-master.hint-text.fs-12 Hello there
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/1.jpg", "data-src-retina" => "/assets/img/profiles/1x.jpg", :height => "34", :src => "/assets/img/profiles/1x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master leroy bell
+                      %span.block.text-master.hint-text.fs-12 Hello there
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/2.jpg", "data-src-retina" => "/assets/img/profiles/2x.jpg", :height => "34", :src => "/assets/img/profiles/2x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master letitia carr
+                      %span.block.text-master.hint-text.fs-12 Hello there
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/3.jpg", "data-src-retina" => "/assets/img/profiles/3x.jpg", :height => "34", :src => "/assets/img/profiles/3x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master lucy castro
+                      %span.block.text-master.hint-text.fs-12 Hello there
+            .list-view-group-container
+              .list-view-group-header.text-uppercase m
+              %ul
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/4.jpg", "data-src-retina" => "/assets/img/profiles/4x.jpg", :height => "34", :src => "/assets/img/profiles/4x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master mae hayes
+                      %span.block.text-master.hint-text.fs-12 Hello there
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/5.jpg", "data-src-retina" => "/assets/img/profiles/5x.jpg", :height => "34", :src => "/assets/img/profiles/5x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master marilyn owens
+                      %span.block.text-master.hint-text.fs-12 Hello there
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/6.jpg", "data-src-retina" => "/assets/img/profiles/6x.jpg", :height => "34", :src => "/assets/img/profiles/6x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master marlene cole
+                      %span.block.text-master.hint-text.fs-12 Hello there
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/7.jpg", "data-src-retina" => "/assets/img/profiles/7x.jpg", :height => "34", :src => "/assets/img/profiles/7x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master marsha warren
+                      %span.block.text-master.hint-text.fs-12 Hello there
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/8.jpg", "data-src-retina" => "/assets/img/profiles/8x.jpg", :height => "34", :src => "/assets/img/profiles/8x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master marsha dean
+                      %span.block.text-master.hint-text.fs-12 Hello there
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/9.jpg", "data-src-retina" => "/assets/img/profiles/9x.jpg", :height => "34", :src => "/assets/img/profiles/9x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master mia diaz
+                      %span.block.text-master.hint-text.fs-12 Hello there
+            .list-view-group-container
+              .list-view-group-header.text-uppercase n
+              %ul
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/1.jpg", "data-src-retina" => "/assets/img/profiles/1x.jpg", :height => "34", :src => "/assets/img/profiles/1x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master noah elliott
+                      %span.block.text-master.hint-text.fs-12 Hello there
+            .list-view-group-container
+              .list-view-group-header.text-uppercase p
+              %ul
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/2.jpg", "data-src-retina" => "/assets/img/profiles/2x.jpg", :height => "34", :src => "/assets/img/profiles/2x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master phyllis hamilton
+                      %span.block.text-master.hint-text.fs-12 Hello there
+            .list-view-group-container
+              .list-view-group-header.text-uppercase r
+              %ul
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/3.jpg", "data-src-retina" => "/assets/img/profiles/3x.jpg", :height => "34", :src => "/assets/img/profiles/3x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master raul rodriquez
+                      %span.block.text-master.hint-text.fs-12 Hello there
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/4.jpg", "data-src-retina" => "/assets/img/profiles/4x.jpg", :height => "34", :src => "/assets/img/profiles/4x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master rhonda barnett
+                      %span.block.text-master.hint-text.fs-12 Hello there
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/5.jpg", "data-src-retina" => "/assets/img/profiles/5x.jpg", :height => "34", :src => "/assets/img/profiles/5x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master roberta king
+                      %span.block.text-master.hint-text.fs-12 Hello there
+            .list-view-group-container
+              .list-view-group-header.text-uppercase s
+              %ul
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/6.jpg", "data-src-retina" => "/assets/img/profiles/6x.jpg", :height => "34", :src => "/assets/img/profiles/6x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master scott armstrong
+                      %span.block.text-master.hint-text.fs-12 Hello there
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/7.jpg", "data-src-retina" => "/assets/img/profiles/7x.jpg", :height => "34", :src => "/assets/img/profiles/7x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master sebastian austin
+                      %span.block.text-master.hint-text.fs-12 Hello there
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/8.jpg", "data-src-retina" => "/assets/img/profiles/8x.jpg", :height => "34", :src => "/assets/img/profiles/8x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master sofia davis
+                      %span.block.text-master.hint-text.fs-12 Hello there
+            .list-view-group-container
+              .list-view-group-header.text-uppercase t
+              %ul
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/9.jpg", "data-src-retina" => "/assets/img/profiles/9x.jpg", :height => "34", :src => "/assets/img/profiles/9x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master terrance young
+                      %span.block.text-master.hint-text.fs-12 Hello there
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/1.jpg", "data-src-retina" => "/assets/img/profiles/1x.jpg", :height => "34", :src => "/assets/img/profiles/1x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master theodore woods
+                      %span.block.text-master.hint-text.fs-12 Hello there
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/2.jpg", "data-src-retina" => "/assets/img/profiles/2x.jpg", :height => "34", :src => "/assets/img/profiles/2x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master todd wood
+                      %span.block.text-master.hint-text.fs-12 Hello there
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/3.jpg", "data-src-retina" => "/assets/img/profiles/3x.jpg", :height => "34", :src => "/assets/img/profiles/3x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master tommy jenkins
+                      %span.block.text-master.hint-text.fs-12 Hello there
+            .list-view-group-container
+              .list-view-group-header.text-uppercase w
+              %ul
+                %li.chat-user-list.clearfix
+                  %a{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "#"}
+                    %span.thumbnail-wrapper.d32.circular.bg-success
+                      %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/4.jpg", "data-src-retina" => "/assets/img/profiles/4x.jpg", :height => "34", :src => "/assets/img/profiles/4x.jpg", :width => "34"}/
+                    %p.p-l-10
+                      %span.text-master wilma hicks
+                      %span.block.text-master.hint-text.fs-12 Hello there
+        .view.chat-view.bg-white.clearfix
+          .navbar.navbar-default
+            .navbar-inner
+              %a.link.text-master.inline.action.p-l-10.p-r-10{"data-navigate" => "view", "data-view-animation" => "push-parrallax", "data-view-port" => "#chat", :href => "javascript:;"}
+                %i.pg-arrow_left
+              .view-heading
+                John Smith
+                .fs-11.hint-text Online
+              %a.link.text-master.inline.action.p-r-10.pull-right{:href => "#"}
+                %i.pg-more
+          #my-conversation.chat-inner
+            .message.clearfix
+              .chat-bubble.from-me
+                Hello there
+            .message.clearfix
+              .profile-img-wrapper.m-t-5.inline
+                %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/avatar_small.jpg", "data-src-retina" => "/assets/img/profiles/avatar_small2x.jpg", :height => "30", :src => "/assets/img/profiles/avatar_small.jpg", :width => "30"}/
+              .chat-bubble.from-them
+                Hey
+            .message.clearfix
+              .chat-bubble.from-me
+                Did you check out Pages framework ?
+            .message.clearfix
+              .chat-bubble.from-me
+                Its an awesome chat
+            .message.clearfix
+              .profile-img-wrapper.m-t-5.inline
+                %img.col-top{:alt => "", "data-src" => "/assets/img/profiles/avatar_small.jpg", "data-src-retina" => "/assets/img/profiles/avatar_small2x.jpg", :height => "30", :src => "/assets/img/profiles/avatar_small.jpg", :width => "30"}/
+              .chat-bubble.from-them
+                Yea
+          .b-t.b-grey.bg-white.clearfix.p-l-10.p-r-10
+            .row
+              .col-1.p-t-15
+                %a.link.text-master{:href => "#"}
+                  %i.fa.fa-plus-circle
+              .col-8.no-padding
+                %input.form-control.chat-input{"data-chat-conversation" => "#my-conversation", "data-chat-input" => "", :placeholder => "Say something", :type => "text"}/
+              .col-2.link.text-master.m-l-10.m-t-15.p-l-10.b-l.b-grey.col-top
+                %a.link.text-master{:href => "#"}
+                  %i.pg-camera

@@ -1,6 +1,7 @@
 class NewStatusesController < ApplicationController
+  before_action :authenticate_user!
   def index
-    @status = NewStatus.all
+    @statuses = NewStatus.all
   end
   private
     def params_stutus

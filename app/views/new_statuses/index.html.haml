@@ -1,10 +1,23 @@
-%h1 NewStatuses#index
-%table
-  %thead
-    %tr
-      %th Name
-  %tbody
-    - @status.each do |status|
-      %tr
-        %td= status.name
+%br
+%row
+  .col-mx-auto
+    .card
+      .card-body
+        .table-responsive
+          %table#basicTable.table.table-hover.border-table
+            %thead
+              %tr.text-center
+                %th{:style => "width: 80%;"}
+                  Name
+                %th{:style => "width: 20%;"} 
+            %tbody
+              - @statuses.each do |status|
+                %tr
+                  %td= status.name
+                  %td.text-center
+                    %a.btn.btn-effect-ripple.btn-sm.btn-success{"data-toggle" => "tooltip", :href => "#", :title => "edit"}
+                      %i.fa.fa-pencil
+                    %a.btn.btn-effect-ripple.btn-sm.btn-danger{"data-toggle" => "tooltip", :onclick => "#", :title => "delete"}
+                      %i.fa.fa-times
+
         

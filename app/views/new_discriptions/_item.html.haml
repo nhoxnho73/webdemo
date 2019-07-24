@@ -1,0 +1,18 @@
+.col-md-3{id: "discription_id_#{discription.id}"}
+  .card.card-default
+    .card-header.bg-info.text-white
+      %span
+        %strong
+          = discription.new_status_id
+        %br
+        %span.small.hint-text
+          = discription.discription
+        
+        .card-controls{style: "position: absolute; top:20px; right: 20px"}
+          %ul
+            %li
+              %a{href: "javascript:;", title: 'Sửa', onClick: "Views.NewDiscription.edit(this)", data: {toggle: :tooltip, target: "#edit_discription", url: new_discription_path(id: discription.id), discription: discription.as_json(only: [:new_status_id, :discription])}}
+                %i.text-white.fa.fa-pencil
+            %li
+              %a{href: "javascript:;", 'data-toggle': :tooltip, title: "Xóa", onClick: "Views.NewDiscription.delete(#{discription.id})"}
+                %i.text-white.fa.fa-times

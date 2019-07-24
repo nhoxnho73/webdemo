@@ -1,11 +1,12 @@
-%h1 Discription
-%table
-  %thead
-    %tr
-      %th code
-      %th discription
-  %tbody
-    - @discription.each do |discription|
-      %tr
-        %td= discription.code
-        %td= discription.discription
+.row
+  .col-lg-12
+    %button.btn.btn-primary{data: {toggle: :modal, target: "#new_discription"}}
+      Tạo nội dung mới
+%br
+.row#discriptions
+  - @discriptions.each do |discription|
+    = render "item", discription: discription
+
+  = render "new"
+
+  = render "edit"

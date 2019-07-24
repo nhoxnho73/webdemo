@@ -15,9 +15,18 @@ end
 
 new_discriptions = NewDiscription.all.to_a
 if new_discriptions.empty?
-    new_discriptions << NewDiscription.new(code: 1, discription: "Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop a")
-    new_discriptions << NewDiscription.new(code: 1, discription: "Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop b")
-    new_discriptions << NewDiscription.new(code: 2, discription: "Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop c")
-    new_discriptions << NewDiscription.new(code: 2, discription: "Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop d")
+    new_discriptions << NewDiscription.new(new_status_id: 1, discription: "Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop a")
+    new_discriptions << NewDiscription.new(new_status_id: 2, discription: "Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop b")
+    new_discriptions << NewDiscription.new(new_status_id: 3, discription: "Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop c")
+    new_discriptions << NewDiscription.new(new_status_id: 1, discription: "Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop d")
     NewDiscription.import new_discriptions
 end
+
+admin_user = User.new(
+    full_name: "Admin", 
+    email: "admin@abc.com", 
+    avatar: Faker::Avatar.image,
+    password: "12345678", 
+    country_id: 1,
+    confirmed_at: DateTime.now)
+admin_user.save

@@ -1,0 +1,20 @@
+.sidebar-menu
+  / BEGIN SIDEBAR MENU ITEMS
+  %ul.menu-items
+    %li.m-t-30
+      = link_to :new_statuses, class: 'detailed' do
+        %span.title Dashboard
+      %span.bg-success.icon-thumbnail
+        %i.pg-home
+      %li
+        %a{:href => "javascript:;"}
+          %span.title Detail
+          %span.arrow
+        %span.icon-thumbnail
+          %i.fa-key.fa
+        %ul.sub-menu
+          %li
+            = link_to :new_discriptions do
+              Chi tiết
+            %span.icon-thumbnail LK
+  .clearfix

@@ -1,0 +1,20 @@
+- if notice.present?
+  .alert.alert-success.alert-dismissable.animation-fadeInQuick
+    %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", :type => "button"} ×
+    %ul
+      - if notice.kind_of?(Array)
+        - notice.each do |msg|
+          %li #{msg}
+      - else
+        %li #{notice}
+- if alert.present?
+  .alert.alert-danger.animation-fadeInQuick
+    %button.close{"data-dismiss" => "alert", :type => "button"} ×
+    %ul
+      - if alert.kind_of?(Array)
+        - alert.each do |msg|
+          %li #{msg}
+      - else
+        %li #{alert}
+
+- flash.discard

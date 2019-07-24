@@ -1,0 +1,28 @@
+.header
+  %a.btn-link.toggle-sidebar.d-lg-none.pg.pg-menu{"data-toggle" => "sidebar", :href => "#"}
+  %div
+    .brand.inline
+      %p.nav-header-logo Books
+    %a.search-link.d-lg-inline-block.d-none{"data-toggle" => "search", :href => "#"}
+      %i.pg-search>
+      Type here to
+      %span.bold search
+  .d-flex.align-items-center
+    .pull-left.p-r-10.fs-14.font-heading.d-lg-block.d-none
+      %span.semi-bold 
+      Lê Thanh Phong
+    .dropdown.pull-right.d-lg-block.d-none
+      %button.profile-dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
+        %span.thumbnail-wrapper.d32.circular.inline
+          %canvas.user-avatar{width: '32', height: '32', id: "user", 'data-name': '#{Lê Thanh Phong}', 'data-email': '#{Thanhphong7up@gmail.com}'}
+      .dropdown-menu.dropdown-menu-right.profile-dropdown{:role => "menu"}
+        %a.dropdown-item{:href => "#"}
+          %i.fa.fa-user
+          User information
+        = link_to  user_change_password_users_path, method: :get, class: 'dropdown-item' do
+          %i.fa.fa-key
+          Change password
+        = link_to destroy_user_session_path, method: :delete, class: "clearfix bg-master-lighter dropdown-item" do
+          %span.pull-left Logout
+          %span.pull-right
+            %i.pg-power
