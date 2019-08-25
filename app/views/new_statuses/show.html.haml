@@ -1,0 +1,15 @@
+%br
+%row
+	.col-mx-auto
+		.card
+			.card-body
+				.table-responsive
+					%table#basicTable.table.table-hover.border-table
+						%thead
+							%tr.text-center
+								%th{:style => "width: 80%;"}
+									Nội dung
+						%tbody
+							- @discriptions.each do |discription|
+								%tr
+									%td= discription.discription

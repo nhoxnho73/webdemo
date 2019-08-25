@@ -3,9 +3,9 @@
   .form-group.required
     = f.label "Mã chủ đề"
     = f.select :new_status_id, @theme.collect{|theme| [theme.name, theme.id]},{}, {class: 'browser-default custom-select'}
-  .form-group.form-group-default.required
+  .form-group.required
     = f.label :discription, "Mô tả"
-    = f.text_area :discription, class: "form-control",required: :required, id: :discription
+    = f.text_area :discription, class: "form-control",required: :required, rows: 6, id: :discription
   .form-group.text-center
     = f.submit "Lưu", class: "btn btn-primary", "data-disable-with": "Đang lưu ..."
     %button.btn.btn-danger{"data-dismiss": :modal}

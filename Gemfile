@@ -41,6 +41,9 @@ gem 'ransack'
 gem 'pagy'
 gem "rack-mini-profiler",  require: false
 gem 'attach', '~> 1.0.1' #upload file
+gem 'pry-rails'
+gem 'pry-doc'
+gem 'pry-stack_explorer'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
