@@ -567,9 +567,6 @@ body.menu-pin .overlay .overlay-brand {
   padding: 0;
   position: relative;
 }
-.horizontal-app-menu .menu-bar > ul > li:hover:not(":open") > a {
-  color: #47b5ab;
-}
 .horizontal-app-menu .menu-bar > ul > li:first-child > a {
   padding-left: 0;
 }
