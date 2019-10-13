@@ -20,9 +20,9 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  host: ec2-54-235-246-201.compute-1.amazonaws.com
-  username: rmdiizfkvmakyn
-  password: cd5cb1cd6dae675ec805001ab6916f07d6f94610c7d48224e055cde2c603a31f
+  host: localhost
+  username: postgres
+  password: 864114
   port: 5432
 
 
