@@ -1,6 +1,12 @@
+.row
+	.col-lg-12
+		%button.btn.btn-primary{data: {toggle: :modal, target: "#new_status"}}
+			Tạo nội chủ đề mới
+
+			
 %br
-%row
-	.col-mx-auto
+.row
+	.col-lg-12
 		.card
 			.card-body
 				.table-responsive
@@ -18,7 +24,7 @@
 									%td.text-center
 										%a.btn.btn-effect-ripple.btn-sm.btn-success{"data-toggle" => "tooltip", :href => "#", :title => "edit"}
 											%i.fa.fa-pencil
-										%a.btn.btn-effect-ripple.btn-sm.btn-danger{"data-toggle" => "tooltip", :onclick => "#", :title => "delete"}
+										%a.btn.btn-effect-ripple.btn-sm.btn-danger{"data-toggle" => "tooltip", :onclick => "Views.NewStatus.delete(#{status.id})", :title => "delete"}
 											%i.fa.fa-times
 											
 

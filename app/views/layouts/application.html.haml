@@ -22,14 +22,13 @@
     = csp_meta_tag 
 
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' 
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload' 
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   
 
     %body.fixed-header
     %nav.page-sidebar{"data-pages" => "sidebar"}
       = render 'layouts/sidebar_top_tray'
       .sidebar-header
-        -#%img.brand{:alt => "logo", "data-src" => "/assets/img/logo_white.png", "data-src-retina" => "/assets/img/logo_white_2x.png", :height => "22", :src => "/assets/img/logo_white.png", :width => "78"}/
         %div{:style => "display: inline-block;width: 78px;"}
           %p{:style => "font-size: 30px;font-weight: bolder;margin-top: auto;margin-bottom: auto;margin: 0;position: absolute;top: 50%;transform: translate(0, -50%);"}
             Books
@@ -47,15 +46,7 @@
             .container-fluid.container-fixed-lg.sm-p-l-0.sm-p-r-0
               .inner
                 %ol.breadcrumb
-                  -# - @breadcrumbs.keys.each do |breadcrumb|
-                  -#   %li.breadcrumb-item{ class: "#{'active' if breadcrumb == @breadcrumbs.keys.last }"}
-                  -#     %a{:href => "#{@breadcrumbs[breadcrumb]}"} #{breadcrumb}
           .container-fluid.container-fixed-lg.sm-p-l-0.sm-p-r-0
-            -#- flash.each do |key, value|
-            -#  %div{class: "alert alert-#{key}"}
-            -#    %button.close{"data-dismiss": "alert"}
-            -#    %strong
-            -#      = value
             - if notice.present?
               .alert.alert-success.alert-dismissable.animation-fadeInQuick
                 %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", :type => "button"} ×
@@ -77,5 +68,4 @@
 
             = yield
         = render 'layouts/footer'
-    -#= render 'layouts/quick_view'
     = render 'layouts/search_page'

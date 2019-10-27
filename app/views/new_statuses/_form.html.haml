@@ -1,0 +1,9 @@
+.flash-messages
+= form_for @statuses, remote: true, method: method, html: {:autocomplete => 'off'} do |f|
+  .form-group.require
+    = f.label :name, "tên chủ đề"
+    = f.text :name, class: "form-control", required: :required, id: :status_name
+  .form-group.text-center
+    = f.submit 'Lưu', class: 'btn btn-primary', 'data-disable-with': 'Đang lưu...'
+    %button.btn.btn-danger{"data-dismiss": :modal}
+      Đóng
