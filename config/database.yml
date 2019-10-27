@@ -20,21 +20,16 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  # host: localhost
-  # port: 5432
-  # username: postgres
-  # password: 864114
+  host: localhost
+  port: 5432
+  username: postgres
+  password: 864114
   # enviroment test
   # host: ec2-54-235-246-201.compute-1.amazonaws.com
   # username: rmdiizfkvmakyn
   # password: cd5cb1cd6dae675ec805001ab6916f07d6f94610c7d48224e055cde2c603a31f
   # port: 5432
-  # enviroment production
-  database: d27h36815g59lq
-  host: ec2-54-83-55-125.compute-1.amazonaws.com
-  port: 5432
-  username: ifenhlmjxvivcx
-  password: 0838769f2628a0055b22ca6b2dbcdb828a09290225cdcc337f203c25fe984cc8
+
 
 development:
   <<: *default
@@ -54,8 +49,6 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  database: d27h36815g59lq
-  host: ec2-54-83-55-125.compute-1.amazonaws.com
-  port: 5432
-  username: ifenhlmjxvivcx
-  password: 0838769f2628a0055b22ca6b2dbcdb828a09290225cdcc337f203c25fe984cc8
+  database: DEMO1_production
+  username: postgres
+  password: <%= ENV['GSD_DATABASE_PASSWORD'] %>
